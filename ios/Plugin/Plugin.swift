@@ -144,7 +144,7 @@ public class GoogleAuth: CAPPlugin {
         else if let clientId = getConfig().getString("clientId") {
             return clientId;
         }
-        else if let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
+        else if let path = Bundle.main.path(forResource: "GoogleService-Info-Auth", ofType: "plist"),
                 let dict = NSDictionary(contentsOfFile: path) as? [String: AnyObject],
                 let clientId = dict["CLIENT_ID"] as? String {
             return clientId;
